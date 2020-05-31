@@ -1,0 +1,16 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /dwCollect
+spring:
+    application:
+        name: DataWarehouseCollect
+    kafka:
+      bootstrap-servers: bigdata1:9092,bigdata2:9092,bigdata3:9092
+      consumer:
+        group-id: group-collect
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
